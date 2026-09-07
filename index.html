@@ -10,14 +10,19 @@
 
   <header class="navbar">
     <div class="nav-contenedor">
-      <a href="#" class="logo">El Bajón Urbano</a>
-      <button class="btn-menu" id="btnMenu">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#menu">Carta</a>
-        <a href="#promos">Promociones</a>
-        <a href="#horarios">Horarios</a>
-        <a href="./paginas/crearUsuario.html">Crear Usuario</a>
-      </nav>
+      <div class="nav-grupo-izq">
+        <a href="#" class="logo">El Bajón Urbano</a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#menu" class="btn-nav">Carta</a>
+          <a href="#horarios" class="btn-nav">Horarios</a>
+        </nav>
+      </div>
+
+      <div class="nav-grupo-der">
+        <a href="./paginas/crearUsuario.html" class="btn-nav-accion">Iniciar Sesión</a>
+        <button class="btn-nav-accion" id="btnCarrito">🛒 Carrito (0)</button>
+        <button class="btn-menu" id="btnMenu">☰</button>
+      </div>
     </div>
   </header>
 
@@ -28,94 +33,105 @@
   </section>
 
   <main class="contenedor">
+    
     <section id="menu">
       <h2>Nuestros Productos</h2>
       <div class="grid-productos">
         <div class="tarjeta">
           <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Hamburguesa Doble Queso">
-          <h3>Hamburguesa Doble Queso</h3>
-          <p>Doble carne casera, queso cheddar y salsa de la casa.</p>
+          <h3>Hamburguesa Clásica</h3>
+          <p>Carne 100% vacuno, doble queso cheddar, lechuga y salsa de la casa.</p>
           <span class="precio">$5.990</span>
         </div>
 
         <div class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Hamburguesa Clásica">
-          <h3>Hamburguesa Clásica</h3>
-          <p>Carne a la plancha, lechuga, tomate, mayonesa y queso.</p>
-          <span class="precio">$4.890</span>
+          <img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=400&q=80" alt="Completo Italiano">
+          <h3>Completo Italiano</h3>
+          <p>Vienesa tradicional, tomate picado, palta natural y mayonesa casera.</p>
+          <span class="precio">$2.990</span>
         </div>
 
         <div class="tarjeta">
-          <img src="https://chinchileproducts.com/cdn/shop/files/Porta-completo.webp" alt="Completo Italiano">
-          <p>Vienesa, tomate fresco en cubos, palta molida y mayonesa.</p>
-          <span class="precio">$2.500</span>
-        </div>
-
-        <div class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=400&q=80" alt="Completo Dinámico">
-          <h3>Completo Dinámico</h3>
-          <p>Vienesa con tomate, chucrut, salsa americana, palta y mayonesa.</p>
-          <span class="precio">$2.800</span>
-        </div>
-
-        <div class="tarjeta">
-          <img src="https://f.fcdn.app/imgs/568aa3/rudyburgers.com/rudyuy/9140/original/catalogo/009003_009003_1/2000-2000/papas-fritas-cheddar-papas-fritas-cheddar.jpg" alt="Papas con Queso Cheddar">
-          <h3>Papas con Cheddar</h3>
-          <p>Porción de papas fritas con salsa de queso cheddar.</p>
-          <span class="precio">$3.500</span>
-        </div>
-
-        <div class="tarjeta">
-          <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80" alt="Bebida">
-          <h3>Bebida en Lata</h3>
-          <p>Lata 350ml fría a elección.</p>
-          <span class="precio">$1.200</span>
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=400&q=80" alt="Papas Fritas">
+          <h3>Papas Cheddar Bacon</h3>
+          <p>Papas rústicas crujientes con salsa cheddar caliente y tocino crocante.</p>
+          <span class="precio">$4.500</span>
         </div>
       </div>
     </section>
 
-    <section id="promos" class="seccion-tabla">
-      <h2>Combos</h2>
+    <section id="envios" class="seccion-info" style="text-align: center; margin-top: 40px;">
+      <h2 style="margin-bottom: 10px;">🚚 Envíos y Delivery</h2>
+      <p style="font-weight: bold; font-size: 18px; color: var(--color-acento); margin-bottom: 8px;">¡Envío gratis por compras sobre $15.000!</p>
+      <p>Pide antes de las 23:00 hrs y recibe tu bajón en menos de 45 minutos en toda la comuna.</p>
+    </section>
+
+    <section id="horarios" class="seccion-tabla">
+      <h2>Horarios de Atención</h2>
       <table>
         <thead>
           <tr>
-            <th>Promoción</th>
-            <th>Descripción</th>
-            <th>Precio</th>
+            <th>Día</th>
+            <th>Apertura</th>
+            <th>Cierre</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Combo Pareja</td>
-            <td>2 Hamburguesas Clásicas + 1 Papa Mediana + 2 Bebidas</td>
-            <td>$11.990</td>
+            <td>Lunes a Jueves</td>
+            <td>18:00</td>
+            <td>01:00</td>
           </tr>
           <tr>
-            <td>Combo Italiano</td>
-            <td>2 Completos Italianos + 1 Papa Pequeña + 1 Bebida</td>
-            <td>$6.490</td>
+            <td>Viernes y Sábado</td>
+            <td>18:00</td>
+            <td>04:00</td>
           </tr>
           <tr>
-            <td>Combo Familiar</td>
-            <td>4 Hamburguesas Dobles + 2 Papas Grandes + 1 Bebida 1.5L</td>
-            <td>$23.990</td>
+            <td>Domingo</td>
+            <td>18:00</td>
+            <td>00:00</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <section id="horarios" class="seccion-info">
-      <h2>Horarios de Atención</h2>
-      <ul>
-        <li><strong>Lunes a Jueves:</strong> 12:30 a 22:30 hrs</li>
-        <li><strong>Viernes y Sábados:</strong> 12:30 a 00:30 hrs</li>
-        <li><strong>Domingos:</strong> Cerrado</li>
-      </ul>
-    </section>
   </main>
 
-  <footer class="pie-pagina">
-    <p>&copy; 2026 El Bajón Urbano. Todos los derechos reservados.</p>
+  <footer class="pie-pagina-completo">
+    <div class="contenedor-footer">
+      <div class="columna-footer">
+        <h4>Sobre Nosotros</h4>
+        <p>El mejor bajón urbano de la zona. Comida rápida casera con ingredientes frescos y preparación al instante.</p>
+      </div>
+
+      <div class="columna-footer">
+        <h4>Categorías</h4>
+        <ul>
+          <li><a href="#menu">Hamburguesas</a></li>
+          <li><a href="#menu">Completos</a></li>
+          <li><a href="#menu">Papas Fritas</a></li>
+          <li><a href="#menu">Bebidas</a></li>
+        </ul>
+      </div>
+
+      <div class="columna-footer">
+        <h4>Contacto</h4>
+        <p>Teléfono: +56 9 1234 5678</p>
+        <p>Email: contacto@elbajonurbano.cl</p>
+        <p>Instagram: @elbajonurbano</p>
+      </div>
+
+      <div class="columna-footer">
+        <h4>Ubicación</h4>
+        <p>Av. Principal #1234</p>
+        <p>Delivery y Retiro en local</p>
+      </div>
+    </div>
+
+    <div class="copy-final">
+      <p>&copy; 2026 El Bajón Urbano. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
   <script src="./js/main.js"></script>
