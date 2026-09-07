@@ -1,3 +1,14 @@
+:root {
+  --color-fondo: #121212;
+  --color-tarjeta: #1e1e1e;
+  --color-primario: #d90429;
+  --color-primario-hover: #b00320;
+  --color-acento: #ffb703;
+  --color-texto: #f8f9fa;
+  --color-texto-secundario: #adb5bd;
+  --color-borde: #333333;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +17,17 @@
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #333333;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   line-height: 1.6;
 }
 
 .navbar {
-  background-color: #222222;
+  background-color: #000000;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .nav-contenedor {
@@ -28,36 +40,38 @@ body {
 }
 
 .logo {
-  color: #e67e22;
+  color: var(--color-primario);
   font-size: 22px;
   font-weight: bold;
   text-decoration: none;
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: var(--color-texto);
   text-decoration: none;
   margin-left: 20px;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: #e67e22;
+  color: var(--color-acento);
 }
 
 .btn-menu {
   display: none;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--color-texto);
   font-size: 26px;
   cursor: pointer;
 }
 
 .banner {
-  background-color: #2d3436;
-  color: #ffffff;
+  background-color: #1a1a1a;
+  color: var(--color-texto);
   text-align: center;
   padding: 60px 20px;
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .banner h1 {
@@ -67,13 +81,13 @@ body {
 
 .banner p {
   font-size: 18px;
-  color: #cccccc;
+  color: var(--color-texto-secundario);
   margin-bottom: 20px;
 }
 
 .btn-accion {
   display: inline-block;
-  background-color: #e67e22;
+  background-color: var(--color-primario);
   color: #ffffff;
   padding: 10px 20px;
   text-decoration: none;
@@ -82,7 +96,7 @@ body {
 }
 
 .btn-accion:hover {
-  background-color: #d35400;
+  background-color: var(--color-primario-hover);
 }
 
 .contenedor {
@@ -94,7 +108,7 @@ body {
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #222222;
+  color: var(--color-texto);
 }
 
 .grid-productos {
@@ -105,8 +119,8 @@ h2 {
 }
 
 .tarjeta {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
   border-radius: 6px;
   width: 280px;
   padding-bottom: 15px;
@@ -124,12 +138,13 @@ h2 {
 .tarjeta h3 {
   margin: 12px 0 6px;
   font-size: 18px;
+  color: var(--color-texto);
 }
 
 .tarjeta p {
   padding: 0 10px;
   font-size: 14px;
-  color: #666666;
+  color: var(--color-texto-secundario);
   margin-bottom: 10px;
 }
 
@@ -137,7 +152,7 @@ h2 {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  color: #e67e22;
+  color: var(--color-acento);
 }
 
 .seccion-tabla {
@@ -148,25 +163,25 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #ffffff;
+  background-color: var(--color-tarjeta);
 }
 
 th, td {
-  border: 1px solid #dddddd;
+  border: 1px solid var(--color-borde);
   padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #e67e22;
+  background-color: var(--color-primario);
   color: #ffffff;
 }
 
 .seccion-info {
   margin-top: 40px;
-  background-color: #ffffff;
+  background-color: var(--color-tarjeta);
   padding: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid var(--color-borde);
   border-radius: 6px;
 }
 
@@ -177,15 +192,17 @@ th {
 
 .seccion-info li {
   padding: 6px 0;
+  color: var(--color-texto-secundario);
 }
 
 .pie-pagina {
-  background-color: #222222;
-  color: #aaaaaa;
+  background-color: #000000;
+  color: var(--color-texto-secundario);
   text-align: center;
   padding: 20px;
   margin-top: 40px;
   font-size: 14px;
+  border-top: 1px solid var(--color-borde);
 }
 
 @media (max-width: 768px) {
